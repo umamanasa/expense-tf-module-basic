@@ -33,3 +33,16 @@ ansible-playbook -i ${var.name}-dev.manasareddy.online, main.yml -e ansible_user
 EOF
   }
 }
+
+#
+# for expense terraform main.tf code to execute tf-module-basic
+#module "components" {
+#
+#  source   = "git::https://github.com/umamanasa/expense-tf-module-basic.git"
+#  for_each = var.components
+#
+#  zone_id           = var.zone_id
+#  security_groups   = var.security_groups
+#  name              = each.value["name"]
+#  instance_type     = each.value["instance_type"]
+#}
